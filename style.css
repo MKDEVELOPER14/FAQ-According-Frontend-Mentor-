@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root{
+    --font1:'Work Sans', sans-serif;
+    --White: hsl(0, 0%, 100%);
+    --Lightpink: hsl(275, 100%, 97%);
+    --Grayishpurple: hsl(292, 16%, 49%);
+    --Darkpurple: hsl(292, 42%, 14%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+html,body{
+    min-height: 100vh;
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./assets/images/background-pattern-desktop.svg) no-repeat var(--Lightpink);
+    background-size: 100%;
+}
+.card{
+    background-color: var(--White);
+    padding: 2rem;
+    max-width:600px ;
+    border-radius: 1rem;
+}
+.Titlebar{
+    display: flex;
+    gap: 2rem;
+    padding: 0rem 0 1rem 0;
+    margin-bottom: 1rem;
+}
+.Title{
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+.Div1,.Div2,.Div3,.Div4{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.questionBar{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.question{
+    font-weight: 600;
+    cursor: pointer;
+}
+.question:hover{
+    color:hsl(293, 81%, 49%);
+}
+.downArrow{
+    cursor: pointer;
+}
+.answer{
+    width: 100%;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--Grayishpurple);
+}
+
+@media screen and (max-width:430px) {
+    .card{
+        width: 90%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(./assets/images/background-pattern-mobile.svg) no-repeat var(--Lightpink);
+        background-size: 100%;
+    }
+    .answer{
+        margin: 1rem 0;
+    }
+    .logo{
+        width: 30px;
+    }
+    .Titlebar{
+        display: flex;
+        gap: 1rem;
+        padding: 0rem 0 1rem 0;
+        margin-bottom: 1rem;
+    }
+    .Title{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .question{
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+}
